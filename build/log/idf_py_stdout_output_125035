@@ -1,0 +1,410 @@
+Command: /home/harvestedlabs/.espressif/python_env/idf5.5_py3.10_env/bin/python /home/harvestedlabs/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/harvestedlabs/esp/imu_sensor/build/imu_sensor.elf /home/harvestedlabs/esp/imu_sensor/build/bootloader/bootloader.elf -m '/home/harvestedlabs/.espressif/python_env/idf5.5_py3.10_env/bin/python' '/home/harvestedlabs/esp/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Sep 22 2025 19:26:44[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b360h ( 45920) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001b388 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (104) esp_image: segment 2: paddr=0001b3b0 vaddr=3ffb0000 size=023e8h (  9192) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=0001d7a0 vaddr=40080000 size=02878h ( 10360) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=16b84h ( 93060) map[0m
+[0;32mI (154) esp_image: segment 5: paddr=00036bac vaddr=40082878 size=0ace4h ( 44260) load[0m
+[0;32mI (178) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (178) boot: Disabling RNG early entropy source...[0m
+[0;32mI (189) cpu_start: Multicore app[0m
+[0;32mI (197) cpu_start: Pro cpu start user code[0m
+[0;32mI (197) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (197) app_init: Application information:[0m
+[0;32mI (197) app_init: Project name:     imu_sensor[0m
+[0;32mI (202) app_init: App version:      1[0m
+[0;32mI (205) app_init: Compile time:     Sep 22 2025 19:26:37[0m
+[0;32mI (210) app_init: ELF file SHA256:  822adaa26...[0m
+[0;32mI (214) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (218) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (222) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (226) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (230) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (236) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (241) heap_init: At 3FFB2CD8 len 0002D328 (180 KiB): DRAM[0m
+[0;32mI (246) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (252) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (257) heap_init: At 4008D55C len 00012AA4 (74 KiB): IRAM[0m
+[0;33mW (264) spi_flash: boya detected but related driver is not linked, please check option `SPI_FLASH_SUPPORT_BOYA_CHIP`[0m
+[0;32mI (273) spi_flash: detected chip: generic[0m
+[0;32mI (276) spi_flash: flash io: dio[0m
+[0;33mW (279) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (292) main_task: Started on CPU0[0m
+[0;32mI (302) main_task: Calling app_main()[0m
+[0;32mI (302) main_task: Returned from app_main()[0m
+[0;32mI (1002) BNO055: BNO055 detected: Chip ID 0xA0[0m
+[0;32mI (1042) BNO055: BNO055 initialized in NDOF mode[0m
+[0;32mI (1042) BNO055: Accel (mg): X=0.00g Y=0.00g Z=0.00g[0m
+[0;32mI (1542) BNO055: Accel (mg): X=-0.32g Y=-0.49g Z=9.39g[0m
+[0;32mI (2042) BNO055: Accel (mg): X=-0.30g Y=-0.46g Z=9.36g[0m
+[0;32mI (2542) BNO055: Accel (mg): X=-0.29g Y=-0.47g Z=9.38g[0m
+[0;32mI (3042) BNO055: Accel (mg): X=-0.30g Y=-0.46g Z=9.37g[0m
+[0;32mI (3542) BNO055: Accel (mg): X=-0.32g Y=-0.47g Z=9.36g[0m
+[0;32mI (4042) BNO055: Accel (mg): X=-0.29g Y=-0.48g Z=9.40g[0m
+[0;32mI (4542) BNO055: Accel (mg): X=-0.28g Y=-0.47g Z=9.35g[0m
+[0;32mI (5042) BNO055: Accel (mg): X=0.47g Y=0.19g Z=9.33g[0m
+[0;32mI (5542) BNO055: Accel (mg): X=-1.55g Y=-0.22g Z=9.78g[0m
+[0;32mI (6042) BNO055: Accel (mg): X=-0.12g Y=-0.81g Z=9.56g[0m
+[0;32mI (6542) BNO055: Accel (mg): X=-0.17g Y=-0.94g Z=9.66g[0m
+[0;32mI (7042) BNO055: Accel (mg): X=-0.18g Y=-0.91g Z=9.48g[0m
+[0;32mI (7542) BNO055: Accel (mg): X=-0.28g Y=-0.70g Z=9.33g[0m
+[0;32mI (8042) BNO055: Accel (mg): X=-0.28g Y=-0.70g Z=9.37g[0m
+[0;32mI (8542) BNO055: Accel (mg): X=-0.29g Y=-0.69g Z=9.36g[0m
+[0;32mI (9042) BNO055: Accel (mg): X=-0.30g Y=-0.68g Z=9.37g[0m
+[0;32mI (9542) BNO055: Accel (mg): X=-0.29g Y=-0.66g Z=9.38g[0m
+[0;32mI (10042) BNO055: Accel (mg): X=-0.29g Y=-0.69g Z=9.37g[0m
+[0;32mI (10542) BNO055: Accel (mg): X=-0.29g Y=-0.69g Z=9.37g[0m
+[0;32mI (11042) BNO055: Accel (mg): X=-0.29g Y=-0.69g Z=9.37g[0m
+[0;32mI (11542) BNO055: Accel (mg): X=-0.29g Y=-0.69g Z=9.35g[0m
+[0;32mI (12042) BNO055: Accel (mg): X=-0.31g Y=-0.68g Z=9.36g[0m
+[0;32mI (12542) BNO055: Accel (mg): X=-0.29g Y=-0.67g Z=9.33g[0m
+[0;32mI (13042) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.36g[0m
+[0;32mI (13542) BNO055: Accel (mg): X=-0.28g Y=-0.68g Z=9.35g[0m
+[0;32mI (14042) BNO055: Accel (mg): X=-0.30g Y=-0.68g Z=9.35g[0m
+[0;32mI (14542) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.39g[0m
+[0;32mI (15042) BNO055: Accel (mg): X=-0.28g Y=-0.70g Z=9.39g[0m
+[0;32mI (15542) BNO055: Accel (mg): X=-0.29g Y=-0.69g Z=9.37g[0m
+[0;32mI (16042) BNO055: Accel (mg): X=-0.29g Y=-0.69g Z=9.39g[0m
+[0;32mI (16542) BNO055: Accel (mg): X=-0.30g Y=-0.70g Z=9.39g[0m
+[0;32mI (17042) BNO055: Accel (mg): X=-0.29g Y=-0.69g Z=9.35g[0m
+[0;32mI (17542) BNO055: Accel (mg): X=-0.30g Y=-0.69g Z=9.37g[0m
+[0;32mI (18042) BNO055: Accel (mg): X=-0.30g Y=-0.69g Z=9.38g[0m
+[0;32mI (18542) BNO055: Accel (mg): X=-0.30g Y=-0.68g Z=9.38g[0m
+[0;32mI (19042) BNO055: Accel (mg): X=-0.30g Y=-0.69g Z=9.36g[0m
+[0;32mI (19542) BNO055: Accel (mg): X=-0.30g Y=-0.70g Z=9.38g[0m
+[0;32mI (20042) BNO055: Accel (mg): X=-0.31g Y=-0.69g Z=9.37g[0m
+[0;32mI (20542) BNO055: Accel (mg): X=-0.29g Y=-0.69g Z=9.38g[0m
+[0;32mI (21042) BNO055: Accel (mg): X=-0.31g Y=-0.69g Z=9.38g[0m
+[0;32mI (21542) BNO055: Accel (mg): X=-0.31g Y=-0.70g Z=9.37g[0m
+[0;32mI (22042) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.37g[0m
+[0;32mI (22542) BNO055: Accel (mg): X=-0.29g Y=-0.69g Z=9.37g[0m
+[0;32mI (23042) BNO055: Accel (mg): X=-0.30g Y=-0.69g Z=9.39g[0m
+[0;32mI (23542) BNO055: Accel (mg): X=-0.28g Y=-0.69g Z=9.37g[0m
+[0;32mI (24042) BNO055: Accel (mg): X=-0.30g Y=-0.68g Z=9.38g[0m
+[0;32mI (24542) BNO055: Accel (mg): X=-0.28g Y=-0.69g Z=9.38g[0m
+[0;32mI (25042) BNO055: Accel (mg): X=-0.30g Y=-0.68g Z=9.38g[0m
+[0;32mI (25542) BNO055: Accel (mg): X=-0.28g Y=-0.71g Z=9.38g[0m
+[0;32mI (26042) BNO055: Accel (mg): X=-0.29g Y=-0.72g Z=9.39g[0m
+[0;32mI (26542) BNO055: Accel (mg): X=-0.29g Y=-0.70g Z=9.35g[0m
+[0;32mI (27042) BNO055: Accel (mg): X=-0.30g Y=-0.69g Z=9.35g[0m
+[0;32mI (27542) BNO055: Accel (mg): X=-0.28g Y=-0.67g Z=9.37g[0m
+[0;32mI (28042) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.40g[0m
+[0;32mI (28542) BNO055: Accel (mg): X=-0.30g Y=-0.68g Z=9.36g[0m
+[0;32mI (29042) BNO055: Accel (mg): X=-0.29g Y=-0.67g Z=9.35g[0m
+[0;32mI (29542) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.38g[0m
+[0;32mI (30042) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.37g[0m
+[0;32mI (30542) BNO055: Accel (mg): X=-0.30g Y=-0.70g Z=9.37g[0m
+[0;32mI (31042) BNO055: Accel (mg): X=-0.30g Y=-0.67g Z=9.36g[0m
+[0;32mI (31542) BNO055: Accel (mg): X=-0.29g Y=-0.70g Z=9.38g[0m
+[0;32mI (32042) BNO055: Accel (mg): X=-0.32g Y=-0.69g Z=9.36g[0m
+[0;32mI (32542) BNO055: Accel (mg): X=-0.30g Y=-0.69g Z=9.37g[0m
+[0;32mI (33042) BNO055: Accel (mg): X=-0.29g Y=-0.69g Z=9.34g[0m
+[0;32mI (33542) BNO055: Accel (mg): X=-0.28g Y=-0.67g Z=9.37g[0m
+[0;32mI (34042) BNO055: Accel (mg): X=-0.30g Y=-0.68g Z=9.37g[0m
+[0;32mI (34542) BNO055: Accel (mg): X=-0.28g Y=-0.67g Z=9.36g[0m
+[0;32mI (35042) BNO055: Accel (mg): X=-0.29g Y=-0.71g Z=9.37g[0m
+[0;32mI (35542) BNO055: Accel (mg): X=-0.30g Y=-0.69g Z=9.36g[0m
+[0;32mI (36042) BNO055: Accel (mg): X=-0.28g Y=-0.69g Z=9.35g[0m
+[0;32mI (36542) BNO055: Accel (mg): X=-0.31g Y=-0.69g Z=9.37g[0m
+[0;32mI (37042) BNO055: Accel (mg): X=-0.30g Y=-0.69g Z=9.45g[0m
+[0;32mI (37542) BNO055: Accel (mg): X=-0.28g Y=-0.68g Z=9.38g[0m
+[0;32mI (38042) BNO055: Accel (mg): X=-0.30g Y=-0.67g Z=9.37g[0m
+[0;32mI (38542) BNO055: Accel (mg): X=-0.31g Y=-0.70g Z=9.36g[0m
+[0;32mI (39042) BNO055: Accel (mg): X=-0.29g Y=-0.71g Z=9.36g[0m
+[0;32mI (39542) BNO055: Accel (mg): X=-0.29g Y=-0.69g Z=9.38g[0m
+[0;32mI (40042) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.39g[0m
+[0;32mI (40542) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.39g[0m
+[0;32mI (41042) BNO055: Accel (mg): X=-0.30g Y=-0.70g Z=9.39g[0m
+[0;32mI (41542) BNO055: Accel (mg): X=-0.29g Y=-0.70g Z=9.35g[0m
+[0;32mI (42042) BNO055: Accel (mg): X=-0.30g Y=-0.69g Z=9.37g[0m
+[0;32mI (42542) BNO055: Accel (mg): X=-0.28g Y=-0.70g Z=9.37g[0m
+[0;32mI (43042) BNO055: Accel (mg): X=-0.30g Y=-0.69g Z=9.38g[0m
+[0;32mI (43542) BNO055: Accel (mg): X=-0.28g Y=-0.70g Z=9.38g[0m
+[0;32mI (44042) BNO055: Accel (mg): X=-0.29g Y=-0.67g Z=9.39g[0m
+[0;32mI (44542) BNO055: Accel (mg): X=-0.31g Y=-0.70g Z=9.35g[0m
+[0;32mI (45042) BNO055: Accel (mg): X=-0.29g Y=-0.69g Z=9.37g[0m
+[0;32mI (45542) BNO055: Accel (mg): X=-0.30g Y=-0.70g Z=9.36g[0m
+[0;32mI (46042) BNO055: Accel (mg): X=-0.31g Y=-0.69g Z=9.39g[0m
+[0;32mI (46542) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.37g[0m
+[0;32mI (47042) BNO055: Accel (mg): X=-0.30g Y=-0.71g Z=9.37g[0m
+[0;32mI (47542) BNO055: Accel (mg): X=-0.29g Y=-0.70g Z=9.39g[0m
+[0;32mI (48042) BNO055: Accel (mg): X=-0.30g Y=-0.69g Z=9.34g[0m
+[0;32mI (48542) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.40g[0m
+[0;32mI (49042) BNO055: Accel (mg): X=-0.31g Y=-0.68g Z=9.37g[0m
+[0;32mI (49542) BNO055: Accel (mg): X=-0.26g Y=-0.69g Z=9.36g[0m
+[0;32mI (50042) BNO055: Accel (mg): X=-0.28g Y=-0.69g Z=9.37g[0m
+[0;32mI (50542) BNO055: Accel (mg): X=-0.30g Y=-0.70g Z=9.37g[0m
+[0;32mI (51042) BNO055: Accel (mg): X=-0.29g Y=-0.72g Z=9.32g[0m
+[0;32mI (51542) BNO055: Accel (mg): X=-0.30g Y=-0.69g Z=9.35g[0m
+[0;32mI (52042) BNO055: Accel (mg): X=-0.31g Y=-0.69g Z=9.35g[0m
+[0;32mI (52542) BNO055: Accel (mg): X=-0.30g Y=-0.70g Z=9.34g[0m
+[0;32mI (53042) BNO055: Accel (mg): X=-0.30g Y=-0.70g Z=9.39g[0m
+[0;32mI (53542) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.36g[0m
+[0;32mI (54042) BNO055: Accel (mg): X=-0.28g Y=-0.70g Z=9.35g[0m
+[0;32mI (54542) BNO055: Accel (mg): X=-0.31g Y=-0.70g Z=9.36g[0m
+[0;32mI (55042) BNO055: Accel (mg): X=-0.29g Y=-0.70g Z=9.35g[0m
+[0;32mI (55542) BNO055: Accel (mg): X=-0.27g Y=-0.67g Z=9.38g[0m
+[0;32mI (56042) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.35g[0m
+[0;32mI (56542) BNO055: Accel (mg): X=-0.30g Y=-0.70g Z=9.37g[0m
+[0;32mI (57042) BNO055: Accel (mg): X=-0.28g Y=-0.67g Z=9.35g[0m
+[0;32mI (57542) BNO055: Accel (mg): X=-0.29g Y=-0.67g Z=9.36g[0m
+[0;32mI (58042) BNO055: Accel (mg): X=-0.30g Y=-0.68g Z=9.36g[0m
+[0;32mI (58542) BNO055: Accel (mg): X=-0.30g Y=-0.67g Z=9.35g[0m
+[0;32mI (59042) BNO055: Accel (mg): X=-0.31g Y=-0.68g Z=9.36g[0m
+[0;32mI (59542) BNO055: Accel (mg): X=-0.30g Y=-0.67g Z=9.38g[0m
+[0;32mI (60042) BNO055: Accel (mg): X=-0.29g Y=-0.69g Z=9.38g[0m
+[0;32mI (60542) BNO055: Accel (mg): X=-0.28g Y=-0.70g Z=9.39g[0m
+[0;32mI (61042) BNO055: Accel (mg): X=-0.30g Y=-0.69g Z=9.37g[0m
+[0;32mI (61542) BNO055: Accel (mg): X=-0.31g Y=-0.71g Z=9.39g[0m
+[0;32mI (62042) BNO055: Accel (mg): X=-0.30g Y=-0.71g Z=9.37g[0m
+[0;32mI (62542) BNO055: Accel (mg): X=-0.27g Y=-0.68g Z=9.37g[0m
+[0;32mI (63042) BNO055: Accel (mg): X=-0.29g Y=-0.67g Z=9.39g[0m
+[0;32mI (63542) BNO055: Accel (mg): X=-0.28g Y=-0.70g Z=9.38g[0m
+[0;32mI (64042) BNO055: Accel (mg): X=-0.29g Y=-0.69g Z=9.37g[0m
+[0;32mI (64542) BNO055: Accel (mg): X=-0.28g Y=-0.69g Z=9.38g[0m
+[0;32mI (65042) BNO055: Accel (mg): X=-0.30g Y=-0.70g Z=9.36g[0m
+[0;32mI (65542) BNO055: Accel (mg): X=-0.30g Y=-0.69g Z=9.38g[0m
+[0;32mI (66042) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.39g[0m
+[0;32mI (66542) BNO055: Accel (mg): X=-0.27g Y=-0.67g Z=9.38g[0m
+[0;32mI (67042) BNO055: Accel (mg): X=-0.31g Y=-0.67g Z=9.37g[0m
+[0;32mI (67542) BNO055: Accel (mg): X=-0.31g Y=-0.68g Z=9.37g[0m
+[0;32mI (68042) BNO055: Accel (mg): X=-0.31g Y=-0.70g Z=9.38g[0m
+[0;32mI (68542) BNO055: Accel (mg): X=-0.31g Y=-0.68g Z=9.38g[0m
+[0;32mI (69042) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.36g[0m
+[0;32mI (69542) BNO055: Accel (mg): X=-0.28g Y=-0.69g Z=9.38g[0m
+[0;32mI (70042) BNO055: Accel (mg): X=-0.28g Y=-0.68g Z=9.37g[0m
+[0;32mI (70542) BNO055: Accel (mg): X=-0.30g Y=-0.69g Z=9.36g[0m
+[0;32mI (71042) BNO055: Accel (mg): X=-0.30g Y=-0.69g Z=9.37g[0m
+[0;32mI (71542) BNO055: Accel (mg): X=-0.30g Y=-0.68g Z=9.39g[0m
+[0;32mI (72042) BNO055: Accel (mg): X=-0.29g Y=-0.67g Z=9.37g[0m
+[0;32mI (72542) BNO055: Accel (mg): X=-0.29g Y=-0.70g Z=9.38g[0m
+[0;32mI (73042) BNO055: Accel (mg): X=-0.31g Y=-0.69g Z=9.37g[0m
+[0;32mI (73542) BNO055: Accel (mg): X=-0.30g Y=-0.67g Z=9.36g[0m
+[0;32mI (74042) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.38g[0m
+[0;32mI (74542) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.37g[0m
+[0;32mI (75042) BNO055: Accel (mg): X=-0.28g Y=-0.69g Z=9.36g[0m
+[0;32mI (75542) BNO055: Accel (mg): X=-0.29g Y=-0.71g Z=9.33g[0m
+[0;32mI (76042) BNO055: Accel (mg): X=-0.30g Y=-0.68g Z=9.36g[0m
+[0;32mI (76542) BNO055: Accel (mg): X=-0.29g Y=-0.71g Z=9.38g[0m
+[0;32mI (77042) BNO055: Accel (mg): X=-0.31g Y=-0.71g Z=9.38g[0m
+[0;32mI (77542) BNO055: Accel (mg): X=-0.28g Y=-0.67g Z=9.38g[0m
+[0;32mI (78042) BNO055: Accel (mg): X=-0.28g Y=-0.69g Z=9.37g[0m
+[0;32mI (78542) BNO055: Accel (mg): X=-0.30g Y=-0.69g Z=9.35g[0m
+[0;32mI (79042) BNO055: Accel (mg): X=-0.31g Y=-0.70g Z=9.36g[0m
+[0;32mI (79542) BNO055: Accel (mg): X=-0.27g Y=-0.69g Z=9.35g[0m
+[0;32mI (80042) BNO055: Accel (mg): X=-0.30g Y=-0.67g Z=9.36g[0m
+[0;32mI (80542) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.33g[0m
+[0;32mI (81042) BNO055: Accel (mg): X=-0.28g Y=-0.68g Z=9.37g[0m
+[0;32mI (81542) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.37g[0m
+[0;32mI (82042) BNO055: Accel (mg): X=-0.29g Y=-0.70g Z=9.38g[0m
+[0;32mI (82542) BNO055: Accel (mg): X=-0.30g Y=-0.69g Z=9.39g[0m
+[0;32mI (83042) BNO055: Accel (mg): X=-0.28g Y=-0.68g Z=9.34g[0m
+[0;32mI (83542) BNO055: Accel (mg): X=-0.28g Y=-0.67g Z=9.36g[0m
+[0;32mI (84042) BNO055: Accel (mg): X=-0.29g Y=-0.69g Z=9.36g[0m
+[0;32mI (84542) BNO055: Accel (mg): X=-0.29g Y=-0.69g Z=9.36g[0m
+[0;32mI (85042) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.37g[0m
+[0;32mI (85542) BNO055: Accel (mg): X=-0.30g Y=-0.68g Z=9.37g[0m
+[0;32mI (86042) BNO055: Accel (mg): X=-0.29g Y=-0.69g Z=9.37g[0m
+[0;32mI (86542) BNO055: Accel (mg): X=-0.31g Y=-0.69g Z=9.40g[0m
+[0;32mI (87042) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.37g[0m
+[0;32mI (87542) BNO055: Accel (mg): X=-0.26g Y=-0.68g Z=9.38g[0m
+[0;32mI (88042) BNO055: Accel (mg): X=-0.31g Y=-0.69g Z=9.36g[0m
+[0;32mI (88542) BNO055: Accel (mg): X=-0.29g Y=-0.70g Z=9.36g[0m
+[0;32mI (89042) BNO055: Accel (mg): X=-0.30g Y=-0.69g Z=9.38g[0m
+[0;32mI (89542) BNO055: Accel (mg): X=-0.28g Y=-0.71g Z=9.37g[0m
+[0;32mI (90042) BNO055: Accel (mg): X=-0.32g Y=-0.70g Z=9.34g[0m
+[0;32mI (90542) BNO055: Accel (mg): X=-0.29g Y=-0.67g Z=9.37g[0m
+[0;32mI (91042) BNO055: Accel (mg): X=-0.28g Y=-0.69g Z=9.34g[0m
+[0;32mI (91542) BNO055: Accel (mg): X=-0.29g Y=-0.70g Z=9.35g[0m
+[0;32mI (92042) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.38g[0m
+[0;32mI (92542) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.35g[0m
+[0;32mI (93042) BNO055: Accel (mg): X=-0.28g Y=-0.71g Z=9.38g[0m
+[0;32mI (93542) BNO055: Accel (mg): X=-0.30g Y=-0.69g Z=9.37g[0m
+[0;32mI (94042) BNO055: Accel (mg): X=-0.28g Y=-0.69g Z=9.39g[0m
+[0;32mI (94542) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.36g[0m
+[0;32mI (95042) BNO055: Accel (mg): X=-0.28g Y=-0.70g Z=9.36g[0m
+[0;32mI (95542) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.33g[0m
+[0;32mI (96042) BNO055: Accel (mg): X=-0.29g Y=-0.67g Z=9.37g[0m
+[0;32mI (96542) BNO055: Accel (mg): X=-0.31g Y=-0.68g Z=9.38g[0m
+[0;32mI (97042) BNO055: Accel (mg): X=-0.27g Y=-0.68g Z=9.39g[0m
+[0;32mI (97542) BNO055: Accel (mg): X=-0.30g Y=-0.68g Z=9.36g[0m
+[0;32mI (98042) BNO055: Accel (mg): X=-0.28g Y=-0.69g Z=9.36g[0m
+[0;32mI (98542) BNO055: Accel (mg): X=-0.29g Y=-0.69g Z=9.36g[0m
+[0;32mI (99042) BNO055: Accel (mg): X=-0.29g Y=-0.69g Z=9.38g[0m
+[0;32mI (99542) BNO055: Accel (mg): X=-0.31g Y=-0.69g Z=9.39g[0m
+[0;32mI (100042) BNO055: Accel (mg): X=-0.29g Y=-0.71g Z=9.36g[0m
+[0;32mI (100542) BNO055: Accel (mg): X=-0.29g Y=-0.67g Z=9.37g[0m
+[0;32mI (101042) BNO055: Accel (mg): X=-0.28g Y=-0.69g Z=9.34g[0m
+[0;32mI (101542) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.34g[0m
+[0;32mI (102042) BNO055: Accel (mg): X=-0.31g Y=-0.69g Z=9.33g[0m
+[0;32mI (102542) BNO055: Accel (mg): X=-0.27g Y=-0.67g Z=9.50g[0m
+[0;32mI (103042) BNO055: Accel (mg): X=-0.29g Y=-0.70g Z=9.35g[0m
+[0;32mI (103542) BNO055: Accel (mg): X=-0.29g Y=-0.67g Z=9.35g[0m
+[0;32mI (104042) BNO055: Accel (mg): X=-0.27g Y=-0.70g Z=9.36g[0m
+[0;32mI (104542) BNO055: Accel (mg): X=-0.31g Y=-0.68g Z=9.35g[0m
+[0;32mI (105042) BNO055: Accel (mg): X=-0.30g Y=-0.70g Z=9.43g[0m
+[0;32mI (105542) BNO055: Accel (mg): X=-0.28g Y=-0.67g Z=9.28g[0m
+[0;32mI (106042) BNO055: Accel (mg): X=-0.30g Y=-0.70g Z=9.44g[0m
+[0;32mI (106542) BNO055: Accel (mg): X=-0.30g Y=-0.68g Z=9.35g[0m
+[0;32mI (107042) BNO055: Accel (mg): X=-0.29g Y=-0.69g Z=9.34g[0m
+[0;32mI (107542) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.41g[0m
+[0;32mI (108042) BNO055: Accel (mg): X=-0.28g Y=-0.67g Z=9.26g[0m
+[0;32mI (108542) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.38g[0m
+[0;32mI (109042) BNO055: Accel (mg): X=-0.28g Y=-0.68g Z=9.35g[0m
+[0;32mI (109542) BNO055: Accel (mg): X=-0.32g Y=-0.68g Z=9.39g[0m
+[0;32mI (110042) BNO055: Accel (mg): X=-0.29g Y=-0.70g Z=9.38g[0m
+[0;32mI (110542) BNO055: Accel (mg): X=-0.28g Y=-0.68g Z=9.35g[0m
+[0;32mI (111042) BNO055: Accel (mg): X=-0.30g Y=-0.68g Z=9.36g[0m
+[0;32mI (111542) BNO055: Accel (mg): X=-0.30g Y=-0.68g Z=9.39g[0m
+[0;32mI (112042) BNO055: Accel (mg): X=-0.30g Y=-0.68g Z=9.37g[0m
+[0;32mI (112542) BNO055: Accel (mg): X=-0.29g Y=-0.70g Z=9.39g[0m
+[0;32mI (113042) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.35g[0m
+[0;32mI (113542) BNO055: Accel (mg): X=-0.29g Y=-0.69g Z=9.36g[0m
+[0;32mI (114042) BNO055: Accel (mg): X=-0.30g Y=-0.68g Z=9.35g[0m
+[0;32mI (114542) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.37g[0m
+[0;32mI (115042) BNO055: Accel (mg): X=-0.31g Y=-0.70g Z=9.37g[0m
+[0;32mI (115542) BNO055: Accel (mg): X=-0.31g Y=-0.68g Z=9.39g[0m
+[0;32mI (116042) BNO055: Accel (mg): X=-0.30g Y=-0.68g Z=9.36g[0m
+[0;32mI (116542) BNO055: Accel (mg): X=-0.30g Y=-0.71g Z=9.37g[0m
+[0;32mI (117042) BNO055: Accel (mg): X=-0.28g Y=-0.68g Z=9.37g[0m
+[0;32mI (117542) BNO055: Accel (mg): X=-0.29g Y=-0.70g Z=9.36g[0m
+[0;32mI (118042) BNO055: Accel (mg): X=-0.29g Y=-0.71g Z=9.36g[0m
+[0;32mI (118542) BNO055: Accel (mg): X=-0.30g Y=-0.69g Z=9.34g[0m
+[0;32mI (119042) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.39g[0m
+[0;32mI (119542) BNO055: Accel (mg): X=-0.27g Y=-0.68g Z=9.37g[0m
+[0;32mI (120042) BNO055: Accel (mg): X=-0.28g Y=-0.69g Z=9.37g[0m
+[0;32mI (120542) BNO055: Accel (mg): X=-0.31g Y=-0.68g Z=9.35g[0m
+[0;32mI (121042) BNO055: Accel (mg): X=-0.31g Y=-0.68g Z=9.36g[0m
+[0;32mI (121542) BNO055: Accel (mg): X=-0.28g Y=-0.69g Z=9.38g[0m
+[0;32mI (122042) BNO055: Accel (mg): X=-0.28g Y=-0.69g Z=9.39g[0m
+[0;32mI (122542) BNO055: Accel (mg): X=-0.29g Y=-0.70g Z=9.37g[0m
+[0;32mI (123042) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.37g[0m
+[0;32mI (123542) BNO055: Accel (mg): X=-0.30g Y=-0.70g Z=9.36g[0m
+[0;32mI (124042) BNO055: Accel (mg): X=-0.30g Y=-0.68g Z=9.36g[0m
+[0;32mI (124542) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.33g[0m
+[0;32mI (125042) BNO055: Accel (mg): X=-0.30g Y=-0.67g Z=9.36g[0m
+[0;32mI (125542) BNO055: Accel (mg): X=-0.30g Y=-0.70g Z=9.34g[0m
+[0;32mI (126042) BNO055: Accel (mg): X=-0.30g Y=-0.70g Z=9.37g[0m
+[0;32mI (126542) BNO055: Accel (mg): X=-0.29g Y=-0.67g Z=9.36g[0m
+[0;32mI (127042) BNO055: Accel (mg): X=-0.29g Y=-0.69g Z=9.35g[0m
+[0;32mI (127542) BNO055: Accel (mg): X=-0.28g Y=-0.69g Z=9.36g[0m
+[0;32mI (128042) BNO055: Accel (mg): X=-0.31g Y=-0.69g Z=9.38g[0m
+[0;32mI (128542) BNO055: Accel (mg): X=-0.29g Y=-0.69g Z=9.36g[0m
+[0;32mI (129042) BNO055: Accel (mg): X=-0.29g Y=-0.69g Z=9.36g[0m
+[0;32mI (129542) BNO055: Accel (mg): X=-0.29g Y=-0.72g Z=9.50g[0m
+[0;32mI (130042) BNO055: Accel (mg): X=-0.29g Y=-0.69g Z=9.37g[0m
+[0;32mI (130542) BNO055: Accel (mg): X=-0.29g Y=-0.71g Z=9.34g[0m
+[0;32mI (131042) BNO055: Accel (mg): X=-0.31g Y=-0.70g Z=9.38g[0m
+[0;32mI (131542) BNO055: Accel (mg): X=-0.30g Y=-0.69g Z=9.39g[0m
+[0;32mI (132042) BNO055: Accel (mg): X=-0.30g Y=-0.71g Z=9.34g[0m
+[0;32mI (132542) BNO055: Accel (mg): X=-0.26g Y=-0.71g Z=9.46g[0m
+[0;32mI (133042) BNO055: Accel (mg): X=-0.29g Y=-0.70g Z=9.39g[0m
+[0;32mI (133542) BNO055: Accel (mg): X=-0.30g Y=-0.70g Z=9.38g[0m
+[0;32mI (134042) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.38g[0m
+[0;32mI (134542) BNO055: Accel (mg): X=-0.28g Y=-0.69g Z=9.32g[0m
+[0;32mI (135042) BNO055: Accel (mg): X=-0.29g Y=-0.69g Z=9.38g[0m
+[0;32mI (135542) BNO055: Accel (mg): X=-0.30g Y=-0.68g Z=9.40g[0m
+[0;32mI (136042) BNO055: Accel (mg): X=-0.30g Y=-0.69g Z=9.39g[0m
+[0;32mI (136542) BNO055: Accel (mg): X=-0.28g Y=-0.68g Z=9.40g[0m
+[0;32mI (137042) BNO055: Accel (mg): X=-0.28g Y=-0.69g Z=9.37g[0m
+[0;32mI (137542) BNO055: Accel (mg): X=-0.28g Y=-0.68g Z=9.39g[0m
+[0;32mI (138042) BNO055: Accel (mg): X=-0.27g Y=-0.67g Z=9.32g[0m
+[0;32mI (138542) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.38g[0m
+[0;32mI (139042) BNO055: Accel (mg): X=-0.31g Y=-0.70g Z=9.39g[0m
+[0;32mI (139542) BNO055: Accel (mg): X=-0.29g Y=-0.69g Z=9.37g[0m
+[0;32mI (140042) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.36g[0m
+[0;32mI (140542) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.38g[0m
+[0;32mI (141042) BNO055: Accel (mg): X=-0.29g Y=-0.71g Z=9.37g[0m
+[0;32mI (141542) BNO055: Accel (mg): X=-0.29g Y=-0.69g Z=9.39g[0m
+[0;32mI (142042) BNO055: Accel (mg): X=-0.29g Y=-0.67g Z=9.37g[0m
+[0;32mI (142542) BNO055: Accel (mg): X=-0.30g Y=-0.71g Z=9.38g[0m
+[0;32mI (143042) BNO055: Accel (mg): X=-0.30g Y=-0.67g Z=9.37g[0m
+[0;32mI (143542) BNO055: Accel (mg): X=-0.30g Y=-0.69g Z=9.35g[0m
+[0;32mI (144042) BNO055: Accel (mg): X=-0.30g Y=-0.67g Z=9.37g[0m
+[0;32mI (144542) BNO055: Accel (mg): X=-0.29g Y=-0.70g Z=9.38g[0m
+[0;32mI (145042) BNO055: Accel (mg): X=-0.29g Y=-0.69g Z=9.38g[0m
+[0;32mI (145542) BNO055: Accel (mg): X=-0.29g Y=-0.70g Z=9.36g[0m
+[0;32mI (146042) BNO055: Accel (mg): X=-0.29g Y=-0.69g Z=9.35g[0m
+[0;32mI (146542) BNO055: Accel (mg): X=-0.31g Y=-0.69g Z=9.39g[0m
+[0;32mI (147042) BNO055: Accel (mg): X=-0.28g Y=-0.67g Z=9.36g[0m
+[0;32mI (147542) BNO055: Accel (mg): X=-0.29g Y=-0.69g Z=9.33g[0m
+[0;32mI (148042) BNO055: Accel (mg): X=-0.30g Y=-0.69g Z=9.37g[0m
+[0;32mI (148542) BNO055: Accel (mg): X=-0.28g Y=-0.68g Z=9.39g[0m
+[0;32mI (149042) BNO055: Accel (mg): X=-0.28g Y=-0.69g Z=9.37g[0m
+[0;32mI (149542) BNO055: Accel (mg): X=-0.30g Y=-0.68g Z=9.37g[0m
+[0;32mI (150042) BNO055: Accel (mg): X=-0.29g Y=-0.70g Z=9.37g[0m
+[0;32mI (150542) BNO055: Accel (mg): X=-0.29g Y=-0.69g Z=9.36g[0m
+[0;32mI (151042) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.36g[0m
+[0;32mI (151542) BNO055: Accel (mg): X=-0.28g Y=-0.68g Z=9.36g[0m
+[0;32mI (152042) BNO055: Accel (mg): X=-0.27g Y=-0.69g Z=9.37g[0m
+[0;32mI (152542) BNO055: Accel (mg): X=-0.29g Y=-0.69g Z=9.35g[0m
+[0;32mI (153042) BNO055: Accel (mg): X=-0.29g Y=-0.69g Z=9.39g[0m
+[0;32mI (153542) BNO055: Accel (mg): X=-0.29g Y=-0.69g Z=9.37g[0m
+[0;32mI (154042) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.35g[0m
+[0;32mI (154542) BNO055: Accel (mg): X=-0.30g Y=-0.68g Z=9.31g[0m
+[0;32mI (155042) BNO055: Accel (mg): X=-0.28g Y=-0.68g Z=9.37g[0m
+[0;32mI (155542) BNO055: Accel (mg): X=-0.30g Y=-0.69g Z=9.36g[0m
+[0;32mI (156042) BNO055: Accel (mg): X=-0.30g Y=-0.69g Z=9.38g[0m
+[0;32mI (156542) BNO055: Accel (mg): X=-0.31g Y=-0.71g Z=9.39g[0m
+[0;32mI (157042) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.39g[0m
+[0;32mI (157542) BNO055: Accel (mg): X=-0.30g Y=-0.67g Z=9.35g[0m
+[0;32mI (158042) BNO055: Accel (mg): X=-0.30g Y=-0.70g Z=9.38g[0m
+[0;32mI (158542) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.39g[0m
+[0;32mI (159042) BNO055: Accel (mg): X=-0.30g Y=-0.69g Z=9.37g[0m
+[0;32mI (159542) BNO055: Accel (mg): X=-0.28g Y=-0.71g Z=9.36g[0m
+[0;32mI (160042) BNO055: Accel (mg): X=-0.29g Y=-0.69g Z=9.37g[0m
+[0;32mI (160542) BNO055: Accel (mg): X=-0.31g Y=-0.68g Z=9.34g[0m
+[0;32mI (161042) BNO055: Accel (mg): X=-0.31g Y=-0.69g Z=9.34g[0m
+[0;32mI (161542) BNO055: Accel (mg): X=-0.27g Y=-0.69g Z=9.38g[0m
+[0;32mI (162042) BNO055: Accel (mg): X=-0.28g Y=-0.69g Z=9.38g[0m
+[0;32mI (162542) BNO055: Accel (mg): X=-0.28g Y=-0.66g Z=9.37g[0m
+[0;32mI (163042) BNO055: Accel (mg): X=-0.29g Y=-0.69g Z=9.37g[0m
+[0;32mI (163542) BNO055: Accel (mg): X=-0.28g Y=-0.70g Z=9.37g[0m
+[0;32mI (164042) BNO055: Accel (mg): X=-0.30g Y=-0.69g Z=9.38g[0m
+[0;32mI (164542) BNO055: Accel (mg): X=-0.29g Y=-0.70g Z=9.36g[0m
+[0;32mI (165042) BNO055: Accel (mg): X=-0.28g Y=-0.70g Z=9.37g[0m
+[0;32mI (165542) BNO055: Accel (mg): X=-0.29g Y=-0.70g Z=9.36g[0m
+[0;32mI (166042) BNO055: Accel (mg): X=-0.29g Y=-0.70g Z=9.38g[0m
+[0;32mI (166542) BNO055: Accel (mg): X=-0.31g Y=-0.70g Z=9.37g[0m
+[0;32mI (167042) BNO055: Accel (mg): X=-0.30g Y=-0.69g Z=9.36g[0m
+[0;32mI (167542) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.38g[0m
+[0;32mI (168042) BNO055: Accel (mg): X=-0.32g Y=-0.68g Z=9.38g[0m
+[0;32mI (168542) BNO055: Accel (mg): X=-0.28g Y=-0.69g Z=9.37g[0m
+[0;32mI (169042) BNO055: Accel (mg): X=-0.31g Y=-0.68g Z=9.35g[0m
+[0;32mI (169542) BNO055: Accel (mg): X=-0.30g Y=-0.68g Z=9.34g[0m
+[0;32mI (170042) BNO055: Accel (mg): X=-0.29g Y=-0.69g Z=9.37g[0m
+[0;32mI (170542) BNO055: Accel (mg): X=-0.31g Y=-0.70g Z=9.33g[0m
+[0;32mI (171042) BNO055: Accel (mg): X=-0.30g Y=-0.69g Z=9.35g[0m
+[0;32mI (171542) BNO055: Accel (mg): X=-0.28g Y=-0.70g Z=9.35g[0m
+[0;32mI (172042) BNO055: Accel (mg): X=-0.29g Y=-0.69g Z=9.34g[0m
+[0;32mI (172542) BNO055: Accel (mg): X=-0.28g Y=-0.69g Z=9.34g[0m
+[0;32mI (173042) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.35g[0m
+[0;32mI (173542) BNO055: Accel (mg): X=-0.28g Y=-0.70g Z=9.38g[0m
+[0;32mI (174042) BNO055: Accel (mg): X=-0.29g Y=-0.67g Z=9.40g[0m
+[0;32mI (174542) BNO055: Accel (mg): X=-0.29g Y=-0.69g Z=9.33g[0m
+[0;32mI (175042) BNO055: Accel (mg): X=-0.29g Y=-0.68g Z=9.44g[0m

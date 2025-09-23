@@ -1,0 +1,2 @@
+source /home/harvestedlabs/esp/imu_sensor/build/gdbinit/symbols
+source /home/harvestedlabs/esp/imu_sensor/build/gdbinit/connect

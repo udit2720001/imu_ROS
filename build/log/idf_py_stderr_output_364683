@@ -1,0 +1,2 @@
+Command: ninja monior
+ninja: error: unknown target 'monior', did you mean 'monitor'?
