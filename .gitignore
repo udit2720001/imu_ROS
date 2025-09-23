@@ -1,2 +1,2 @@
-build/
-ip.txt
+.build/
+.vscode/

@@ -1,8 +1,0 @@
-(Top) → micro-ROS Settings
-                                                                                                               Espressif IoT Development Framework Configuration
-    micro-ROS middleware (micro-ROS over eProsima Micro XRCE-DDS)  --->
-    micro-ROS network interface select (WLAN interface)  --->
-    WiFi Configuration  --->
-(192.168.1.100) micro-ROS Agent IP
-(8888) micro-ROS Agent Port
-
