@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "imu_sensor",
-    "project_version":    "1",
+    "project_version":    "4c897c3-dirty",
     "project_path":       "/home/harvestedlabs/esp/imu_sensor",
     "idf_path":           "/home/harvestedlabs/esp/esp-idf",
     "build_dir":          "/home/harvestedlabs/esp/imu_sensor/build",

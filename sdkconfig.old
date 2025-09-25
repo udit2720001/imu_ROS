@@ -443,8 +443,8 @@ CONFIG_MICRO_ROS_ESP_NETIF_WLAN=y
 #
 # WiFi Configuration
 #
-CONFIG_ESP_WIFI_SSID="myssid"
-CONFIG_ESP_WIFI_PASSWORD="mypassword"
+CONFIG_ESP_WIFI_SSID="HarvestedLabs"
+CONFIG_ESP_WIFI_PASSWORD="harvestedlabs@2023"
 CONFIG_ESP_MAXIMUM_RETRY=5
 # end of WiFi Configuration
 
